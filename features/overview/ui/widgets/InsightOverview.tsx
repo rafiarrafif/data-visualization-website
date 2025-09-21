@@ -1,14 +1,23 @@
 import React from "react";
 import CardInsight from "../components/CardInsight";
-import { getTotalRevenue } from "../../model/getTotalRevenue";
+import { formatNumberWithCommas } from "@/shared/libs/formatNumberWithCommas";
+import { formatNumberWithUnits } from "@/shared/libs/formatNumberWithUnits";
+import { getOverviewData } from "../../model/getOverviewData";
 
 const InsightOverview = async () => {
-  const data = await getTotalRevenue();
+  const data = await getOverviewData();
   return (
     <div className="flex w-full gap-3">
-      <CardInsight title="Total Revenue" value={String(data)} />
-      <CardInsight title="Total Products" value="19" />
-      <CardInsight title="Total Customers" value="200" />
+      <CardInsight title="Total Products" value={`${data.products}`} />
+      <CardInsight
+        title="Total Revenue"
+        value={`${formatNumberWithUnits(data.revenue)}`}
+        unit="Rupiah"
+      />
+      <CardInsight
+        title="Total Customers"
+        value={`${formatNumberWithCommas(data.customers)}`}
+      />
     </div>
   );
 };
