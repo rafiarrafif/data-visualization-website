@@ -1,21 +1,13 @@
-import React from "react";
-import Greeting from "./components/Greeting";
-import Image from "next/image";
+import React, { Suspense } from "react";
+import InsightOverview from "@/features/overview/ui/widgets/InsightOverview";
+import InsightOverviewLoading from "@/features/overview/ui/widgets/InsightOverview.loading";
 
 const page = () => {
   return (
-    <div className="text-center mt-10 text-xl">
-      <div className="h-20 relative w-full flex justify-center">
-        <Image
-          src="/logo.svg"
-          alt="Logo"
-          fill
-          className="object-contain"
-          draggable={false}
-        />
-      </div>
-      <h1>Hello World Page</h1>
-      <Greeting />
+    <div>
+      <Suspense fallback={<InsightOverviewLoading />}>
+        <InsightOverview />
+      </Suspense>
     </div>
   );
 };
