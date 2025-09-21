@@ -10,17 +10,17 @@ const SidebarNavigation = () => {
     {
       name: "Overview",
       url: "/",
-      icon: "solar:widget-4-bold",
+      icon: "solar:widget-2-bold",
     },
     {
       name: "Store Analytics",
       url: "/stores",
-      icon: "solar:users-group-rounded-bold",
+      icon: "solar:cart-large-2-bold",
     },
     {
       name: "Customer Insights",
       url: "/costumers",
-      icon: "solar:buildings-bold",
+      icon: "solar:users-group-two-rounded-bold",
     },
     {
       name: "Product Analytics",
@@ -30,12 +30,12 @@ const SidebarNavigation = () => {
     {
       name: "Transaction Trends",
       url: "/transactions",
-      icon: "solar:shield-star-bold",
+      icon: "solar:card-transfer-bold",
     },
     {
       name: "Export Reports",
       url: "/reports",
-      icon: "solar:book-bookmark-bold",
+      icon: "solar:export-bold",
     },
   ];
   return (
@@ -52,7 +52,7 @@ const SidebarNavigation = () => {
               color={route === item.url ? "primary" : "secondary"}
               radius="none"
               variant="light"
-              className="font-semibold text-md flex-1 justify-start bg-transparent data-[hover=true]:bg-transparent opacity-100"
+              className="font-medium text-md flex-1 justify-start bg-transparent data-[hover=true]:bg-transparent opacity-100"
               as={Link}
               href={item.url}
               startContent={<Icon icon={item.icon} className="w-5 h-5" />}
