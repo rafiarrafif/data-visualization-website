@@ -1,0 +1,18 @@
+image: oven/bun:latest
+
+stages:
+  - lint
+  - build
+
+before_script:
+  - bun install
+
+lint:
+  stage: lint
+  script:
+    - bun run lint
+
+build:
+  stage: build
+  script:
+    - bun run build
