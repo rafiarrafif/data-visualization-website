@@ -15,6 +15,7 @@
     "@iconify/react": "^6.0.2",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/better-sqlite3": "^7.6.13",
+    "apexcharts": "^5.3.5",
     "better-sqlite3": "^12.2.0",
     "framer-motion": "^12.23.16",
     "next": "15.5.3",
@@ -22,6 +23,7 @@
     "nextjs-toploader": "^3.9.17",
     "postcss": "^8.5.6",
     "react": "19.1.0",
+    "react-apexcharts": "^1.7.0",
     "react-dom": "19.1.0",
     "tailwindcss": "^4.1.13"
   },
