@@ -3,7 +3,7 @@ import CardDistribution from "../components/CardDistribution";
 import { getSalesDistribution } from "../../model/getSalesDistribution";
 
 const DistributionOverview = async () => {
-  const distributionData = await getSalesDistribution();
+  const distributionData: Record<string, any> = await getSalesDistribution();
   return (
     <div>
       <CardDistribution data={distributionData} />
