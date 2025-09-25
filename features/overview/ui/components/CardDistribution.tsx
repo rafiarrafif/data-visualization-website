@@ -3,15 +3,15 @@ import { Card, CardBody, CardHeader } from "@heroui/react";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-const CardDistribution = () => {
+const CardDistribution = ({ data }: { data: string }) => {
   return (
     <Card>
-      <CardHeader>Customer Distribution</CardHeader>
+      <CardHeader>Sales Distribution</CardHeader>
       <CardBody>
         <ReactApexChart
           options={{
             chart: {
-              id: "customer-distribution",
+              id: "sales-distribution",
             },
             xaxis: {
               categories: [2022, 2023, 2024, 2025],

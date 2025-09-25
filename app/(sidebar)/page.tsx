@@ -8,7 +8,7 @@ import DistributionOverviewLoading from "@/features/overview/ui/widgets/Distribu
 
 const page = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 ">
       <Suspense fallback={<InsightOverviewLoading />}>
         <InsightOverview />
       </Suspense>

@@ -1,10 +1,12 @@
 import React from "react";
 import CardDistribution from "../components/CardDistribution";
+import { getSalesDistribution } from "../../model/getSalesDistribution";
 
-const DistributionOverview = () => {
+const DistributionOverview = async () => {
+  const distributionData = await getSalesDistribution();
   return (
     <div>
-      <CardDistribution />
+      <CardDistribution data={distributionData} />
     </div>
   );
 };
