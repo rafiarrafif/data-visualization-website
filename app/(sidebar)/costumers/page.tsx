@@ -1,3 +1,4 @@
+import CustomerCity from "@/features/customers/ui/widgets/CustomerCity";
 import EmailProvider from "@/features/customers/ui/widgets/EmailProvider";
 import EmailProviderLoading from "@/features/customers/ui/widgets/EmailProvider.loading";
 import React, { Suspense } from "react";
@@ -7,10 +8,7 @@ const page = () => {
     <div>
       <div className="flex gap-2">
         <Suspense fallback={<EmailProviderLoading />}>
-          <EmailProvider />
-        </Suspense>
-        <Suspense fallback={<EmailProviderLoading />}>
-          <EmailProvider />
+          <CustomerCity />
         </Suspense>
       </div>
     </div>
