@@ -69,7 +69,7 @@ const CardDistribution = ({ data }: { data: DistributionData[] }) => {
               color: "#EC0868",
             },
             {
-              name: "online",
+              name: "Partnership",
               data: data.map((d) => d["Partnership"]),
               color: "#C200FB",
             },
