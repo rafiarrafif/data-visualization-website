@@ -6,8 +6,8 @@ import ReactApexChart from "react-apexcharts";
 
 const CustomerCityCard = ({ data }: { data: CustomerCityData[] }) => {
   return (
-    <Card>
-      <CardHeader>Customer Email Provider</CardHeader>
+    <Card className="w-full">
+      <CardHeader>Customer City Stats</CardHeader>
       <CardBody>
         <ReactApexChart
           series={[
